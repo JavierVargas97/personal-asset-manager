@@ -1,0 +1,63 @@
+h1{
+    font-size: 100px;
+} 
+
+p{
+    font-size: 80px;
+}
+
+.mainDiv {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    /* width: 80vw; */
+    justify-content: center;
+    margin: auto;
+}
+
+/* Portfolio header and total value styling */
+.portfolioValue{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+/* Assets, graph and button styling */
+.assets {
+        display: flex;
+        /* flex-direction: row; */
+            justify-content: space-around;
+            align-items: center;
+}
+
+.assets table{
+        display: flex;
+        flex-direction: column;
+        align-self: flex-start;
+}
+
+.assets table th,td{
+    padding: 10px;
+}
+
+.assets table th{
+    font-size: 35px;
+}
+
+.assets table td {
+    font-size: 20px;
+}
+
+.assets img{
+    object-fit: scale-down;
+    width: 400px;
+    height: 300px;
+}
+
+.assets button{
+    align-self: flex-start;
+    font-size: 15px;
+    background-color: rgb(165, 165, 165);
+}
