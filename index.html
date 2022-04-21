@@ -11,13 +11,25 @@
 
 <body>
 
+    <div id="mymodal" class = "modal">
+
+        <div class="modal-content">
+            <span class="close">&times;</span>
+
+            <div class = "search-wrapper">
+            <label for ="search">Select Asset</label>
+            <input type="search" id ="search">
+            </div>
+        </div>
+    </div>
+
     <div class="mainDiv">
 
         <div class="portfolioValue">
             <h1>Portfolio <br> Value</h1>
 
             <!-- <p> to insert assets value -->
-            <p class="assetValue">$6,000</p>
+            <p id="assetValue">$6,000</p>
         </div>
 
         <div class="assets">
@@ -25,31 +37,45 @@
             <table>
                 <tr>
                     <th>Asset</th>
-                    <th>Value</th>
+                    <th>Price</th>
+                    <th>Holdings</th>
                     <th>Local value</th>
                 </tr>
                 <tr class="addedAsset">
                     <td>Crypto</td>
-                    <td>1 BTC</td>
-                    <td>$828,967</td>
+                    <td><textarea id="btc"></textarea></td>
+                    <td class = "value">s</td>
+                    <td class="localvalue"></td>
                 </tr>
-                <tr>
-                    <td>Tesla</td>
-                    <td>1 TSL</td>
-                    <td>$20,649</td>
+
+                <tr class="addedAsset">
+                    <td>Stock</td>
+                    <td><textarea id="btc"></textarea></td>
+                    <td class = "value">s</td>
+                    <td class="localvalue"></td>
                 </tr>
+
+                <tr class="addedAsset">
+                    <td>Currency</td>
+                    <td><textarea id="btc"></textarea></td>
+                    <td class = "value">s</td>
+                    <td class="localvalue"></td>
+                </tr>
+
             </table>
             <!-- Graph w/ D3.js  -->
             <img src="./assets/pieChart.jpeg" alt="Pie Chart">
 
-            <button>Assets +</button>
+            <button id = "assetbtn">Assets +</button>
 
 
         </div>
 
+
+
     </div>
 
-    <script src="./js/script.js"></script>
+    <script src="script.js"></script>
 
 </body>
 </html>
