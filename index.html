@@ -18,6 +18,23 @@
 
             <div class = "search-wrapper">
             <label for ="search">Select Asset</label>
+            <ul>
+                <li><button id="cryptobtn">Crypto</button></li>
+                <li><button id="stockbtn">Stock</button></li>
+                <li><button id="currencybtn">Currency</button></li>
+            </ul>
+
+            <table class = "cryptoTable">
+                <thead>
+                    <tr>Symbol</tr>
+                    <tr>Price</tr>
+                </thead>
+                <tbody id= "data">
+
+                </tbody>
+            </table>
+
+
             <input type="search" id ="search">
             </div>
         </div>
@@ -41,25 +58,25 @@
                     <th>Holdings</th>
                     <th>Local value</th>
                 </tr>
-                <tr class="addedAsset">
+                <tr class="cryptoAsset">
                     <td>Crypto</td>
-                    <td><textarea id="btc"></textarea></td>
-                    <td class = "value">s</td>
-                    <td class="localvalue"></td>
+                    <td class="cryptoPrice">(precio aqui)</textarea></td>
+                    <td class = "cryptoHolding">s</td>
+                    <td class="usd/mxn"></td>
                 </tr>
 
-                <tr class="addedAsset">
+                <tr class="stockAsset">
                     <td>Stock</td>
-                    <td><textarea id="btc"></textarea></td>
-                    <td class = "value">s</td>
-                    <td class="localvalue"></td>
+                    <td class="stockPrice">(precio aqui)</textarea></td>
+                    <td class = "stockHolding">s</td>
+                    <td class="usd/mxn"></td>
                 </tr>
 
-                <tr class="addedAsset">
+                <tr class="currencyAsset">
                     <td>Currency</td>
-                    <td><textarea id="btc"></textarea></td>
-                    <td class = "value">s</td>
-                    <td class="localvalue"></td>
+                    <td class="currencyPrice">(precio aqui)</textarea></td>
+                    <td class = "currencyHolding">s</td>
+                    <td class="usd/mxn"></td>
                 </tr>
 
             </table>

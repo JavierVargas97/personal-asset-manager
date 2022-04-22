@@ -18,15 +18,24 @@ window.onclick = function (event) {
 
 }
 
+//document.getElementById("search"). style.display = "none";
 
 
 
-let cripto = "https://api.binance.com/api/v3/ticker/price";
-fetch(cripto)
-.then( respuesta =>respuesta.json())
-.then( datos => mostrarData(datos))
+
+let endpoint = "https://api.binance.com/api/v3/ticker/price";
+fetch(endpoint)
+.then( response =>response.json())
+.then( info => showInfo(info))
 .catch( error => console.log(error))
 
-const mostrarData = (data) => {
+const showInfo = (info) => {
+    console.log(data)
+let body = ""
+for (let i = 0; i < data.length; i++) {
+    body += "<tr><td>${data[i].symbol}<td></tr> <tr><td>${data[i].price}<td></tr>"
+}
+
+document.getElementById("data").innerHTML = body
 
 }
