@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="../dist/output.css">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    <title>Stock/Crypto Portfolio</title>
+</head>
+
+<body>
+
+    <div class="flex flex-col h-screen justify-center mx-auto">
+
+        <div class="flex justify-around pb-10">
+            <h1 class="text-7xl font-bold">Portfolio <br> Value</h1>
+
+            <!-- <p> to insert assets value -->
+            <p class="text-5xl">$6,000</p>
+        </div>
+
+        <div class="flex justify-around items-center">
+            <!-- table to organize assets -->
+
+            <table class="flex flex-col self-start">
+                <tr>
+                    <th class="p-2.5 text-4xl">Asset</th>
+                    <th class="p-2.5 text-4xl">Value</th>
+                    <th class="p-2.5 text-4xl">Local value</th>
+                </tr>
+                <tr class="addedAsset">
+                    <td class="p-2.5 text-xl">Crypto</td>
+                    <td class="p-2.5 text-xl">1 BTC</td>
+                    <td class="p-2.5 text-xl">$828,967</td>
+                </tr>
+                <tr>
+                    <td class="p-2.5 text-xl">Tesla</td>
+                    <td class="p-2.5 text-xl">1 TSL</td>
+                    <td class="p-2.5 text-xl">$20,649</td>
+                </tr>
+            </table>
+            <!-- Graph w/ D3.js  -->
+            <img src="../assets/pieChart.jpeg" alt="Pie Chart" class="object-scale-down w-400px h-300px">
+
+            <button class="self-start text-sm bg-teal-100">Assets +</button>
+
+
+        </div>
+
+    </div>
+
+    <!-- <script src="../js/script.js"></script> -->
+
+</body>
+</html>
