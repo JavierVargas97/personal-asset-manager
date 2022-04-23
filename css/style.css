@@ -4,22 +4,22 @@ body{
 
 /* The Modal (background) */
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
   
   
   /* Modal Content */
-  .modal-content {
+  .modal-content  {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -27,6 +27,8 @@ body{
     width: 40%;
     height: 50%;
     border-radius: 20px;
+    overflow-y: scroll;
+    text-align: center;
   }
   
   /* The Close Button */
@@ -43,8 +45,9 @@ body{
     text-decoration: none;
     cursor: pointer;
 }
+/*Modal css Ends here*/
 
-
+/*Everything that is inside of the modal_______________________________________*/
 .search-wrapper{
     font-size: 40px;
     display: flex;
@@ -55,6 +58,25 @@ body{
 ul{
     display: flex;
 }
+
+.cryptoTable{
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px #a39e9e;
+    background-color: white;
+    font-size: 1.3rem;
+    border-collapse: collapse;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 1rem;
+ 
+ 
+}
+ 
+.hide{
+    display: none;
+}
+
 
 #cryptobtn{
     background-color: #3D426B;
@@ -87,13 +109,16 @@ ul{
     color: white;
 }
 
-#search {
+#cryptoSearch {
     height:35px;
     border-radius: 10px; 
     font-size: 25px;
 
 
 }
+
+/*Modal contents ends here______________________________________________________________________________________*/
+
 
 li {
     list-style: none;
@@ -164,19 +189,4 @@ p{
     background-color: rgb(165, 165, 165);
 }
 
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
   

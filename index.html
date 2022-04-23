@@ -11,6 +11,8 @@
 
 <body>
 
+
+    <!--Modal and its contents .-->
     <div id="mymodal" class = "modal">
 
         <div class="modal-content">
@@ -24,18 +26,22 @@
                 <li><button id="currencybtn">Currency</button></li>
             </ul>
 
+            <input type="text" id ="cryptoSearch" placeholder="Search Crypto...">
             <table class = "cryptoTable">
                 <thead>
-                    <tr>Symbol</tr>
-                    <tr>Price</tr>
+                    <tr>
+                        <th></th>
+                        <th></th>
+                        
+                    </tr>
+                    
                 </thead>
                 <tbody id= "data">
-
                 </tbody>
             </table>
 
 
-            <input type="search" id ="search">
+         
             </div>
         </div>
     </div>
@@ -83,6 +89,8 @@
             <!-- Graph w/ D3.js  -->
             <img src="./assets/pieChart.jpeg" alt="Pie Chart">
 
+            
+            <!---This button opens up the modal-->
             <button id = "assetbtn">Assets +</button>
 
 
