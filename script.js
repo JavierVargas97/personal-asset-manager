@@ -38,7 +38,7 @@ const cryptoSearch = document.getElementById("cryptoSearch")
 const cryptoRows = document.getElementsByTagName("td")
 
 //Trae toda la informacion de cryptos
-let endpoint = "https://api.binance.com/api/v3/ticker/price";
+let endpoint = "https://api.binance.com/api/v3/ticker/price?symbols=[%22ETHUSDT%22,%22BTCUSDT%22,%22XRPUSDT%22,%22DAIUSDT%22,%22LTCUSDT%22,%22BCHUSDT%22,%22AAVEUSDT%22,%22ADAUSDT%22,%22APEUSDT%22,%22AXSUSDT%22,%22BATUSDT%22,%22CHZUSDT%22,%22COMPUSDT%22,%22CRVUSDT%22,%22DYDXUSDT%22,%22ENJUSDT%22,%22FTMUSDT%22,%22GALAUSDT%22,%22GRTUSDT%22,%22LINKUSDT%22,%22LRCUSDT%22,%22MANAUSDT%22,%22MATICUSDT%22,%22MKRUSDT%22,%22OMGUSDT%22,%22QNTUSDT%22,%22SANDUSDT%22,%22SHIBUSDT%22,%22SNXUSDT%22,%22SOLUSDT%22,%22SUSHIUSDT%22,%22UNIUSDT%22,%22YFIUSDT%22]";
 fetch(endpoint)
 .then( response =>response.json())
 .then( info => showInfo(info))
@@ -46,13 +46,16 @@ fetch(endpoint)
 
 //Enseña toda la informacion de cryptos en el modal como una tabla
 const showInfo = (info) => {
-    //console.log(info) AQUI TENGO QUE VER UNA MANERA DE FILTRAR PARA QUE HAGA ESTO UNICAMENTE PARA LAS QUE CONTIENEN USDT
+    document.getElementById("data").innerHTML = info
+    console.log(info) //AQUI TENGO QUE VER UNA MANERA DE FILTRAR PARA QUE HAGA ESTO UNICAMENTE PARA LAS QUE CONTIENEN USDT
+    
+    document.getElementById("data").innerHTML = info
     let body = " "
-    for (let i = 0; i < 100; i++) {
-        body += `<tr><td>${info[i].symbol}<td><td>${info[i].price}<td></tr>`
+    for (let i = 0; i < info.length; i++) {
+        body += `<tr><td>${info[i].symbol}<td> <td>${info[i].price}<td></tr>`
     }
 
-document.getElementById("data").innerHTML = body
+    document.getElementById("data").innerHTML = body
 
 }
 
@@ -78,3 +81,11 @@ cryptoSearch.addEventListener("keyup", (e)=>{
     }
 
 })
+
+
+
+
+
+
+
+
