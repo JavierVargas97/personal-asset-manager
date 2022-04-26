@@ -72,7 +72,11 @@ ul{
  
  
 }
- 
+
+.name{
+    display:none;
+}
+
 .hide{
     display: none;
 }
@@ -189,4 +193,3 @@ p{
     background-color: rgb(165, 165, 165);
 }
 
-  
