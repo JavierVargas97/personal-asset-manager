@@ -1,0 +1,29 @@
+h1 {
+    text-align: center;
+}
+
+#canvas {
+    max-width:75vw;
+    margin: auto;
+}
+
+#tool-tip {
+    display: none;
+    position: absolute;
+    padding: 1rem;
+    font-size: 0.75rem;
+    line-height: 1;
+    line-height: 1.5em;
+    color: #fff;
+    text-align: center;
+    text-transform: capitalize;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 1rem;
+  }
+
+#canvas g:hover rect {
+    fill: #B30000;
+    stroke: #ffffff;
+    transition: fill 0.3s ease-out;
+  }
+  
