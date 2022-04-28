@@ -23,7 +23,7 @@ h1 {
 
 #canvas g:hover rect {
     fill: #B30000;
-    stroke: #000000;
+    stroke: #ffffff;
     transition: fill 0.3s ease-out;
   }
   
