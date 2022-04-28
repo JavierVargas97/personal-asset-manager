@@ -124,6 +124,12 @@ document.getElementById("cryptobtn").onclick = function () {
 
 }
 
+//Constantes establecidas ignore*
+const cryptoSearch = document.getElementById("cryptoSearch")
+// const cryptoRows = document.getElementsByTagName("span")
+const cryptoRows = document.querySelector('#cryptoRows')
+const cryptoTableBody = document.querySelector('#cryptoTableBody')
+
 let trElement;
 let tdAssetNameElement;
 let tdAssetPriceElement;
@@ -138,15 +144,21 @@ let portfolioValue = 0;
 // let cryptoPriceRaw;
 // let cryptoPrice;
 
+let category;
 let symbol;
 let price;
+let priceText;
+let assets = {};
+let asset;
 
-
-// add event listener to btns
+// btnSelection Event Listener
 const btnSelection = (event) => {
-    symbol = event.target.attributes[0].value;
-    price = event.target.attributes[1].value;
-    // console.log(event)
+    category = event.target.attributes[0].value;
+    symbol = event.target.attributes[1].value;
+    price = event.target.attributes[2].value;
+    console.log(event)
+    priceText = `$${Number(price).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+
     step2.style.cssText = 'display:none';
     step3.style.cssText= 'display:block';
 
@@ -157,19 +169,17 @@ const btnSelection = (event) => {
     tdValueLCElement = document.createElement('td');
 
     tdAssetNameElement.innerHTML = symbol;
-    tdAssetPriceElement.innerHTML = price;
+    tdAssetPriceElement.innerHTML = priceText;
 };
 
-
-// Submit BTN Event Listener
+// submitSelection Event Listener
 const submitSelection = (event) => {
     event.preventDefault();
     event.stopPropagation();
-    console.log(portfolioValue)
     currentFX = 20; // CAMBIAR CUANDO SE TENGA EL API
-    valueLC = (price * parseInt(holdings.value)) * currentFX;
-    tdAssetHoldingsElement.innerHTML = parseFloat(holdings.value).toFixed(8);
-    tdValueLCElement.innerHTML = ((price * parseFloat(holdings.value)) * currentFX).toLocaleString();
+    valueLC = (price * Number(holdings.value)) * currentFX;
+    tdAssetHoldingsElement.innerHTML = Number(holdings.value).toFixed(8);
+    tdValueLCElement.innerHTML = `$${((price * Number(holdings.value)) * currentFX).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
     trElement.append(tdAssetNameElement);
     trElement.append(tdAssetPriceElement);
     trElement.append(tdAssetHoldingsElement);
@@ -177,26 +187,80 @@ const submitSelection = (event) => {
     cryptoTableBody.append(trElement);
 
     portfolioValue += valueLC;
-    console.log(portfolioValue)
+    
+    assetValueElement.innerHTML = `$${Number(portfolioValue).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+    // Return to Crypto Selection
+    step2.style.cssText = 'display:block;'
+    step3.style.cssText = 'display:none;'
 
-    assetValueElement.innerHTML = `$${parseFloat(portfolioValue).toLocaleString()}`;
+    console.log(!JSON.parse(localStorage.getItem('assets')))
+    // Add to localStorage
+    if (!JSON.parse(localStorage.getItem('assets'))) {
+        assets = {
+            'name': category,
+            'children': [
+                {
+                    'name': symbol,
+                    'price': priceText,
+                    'holdings': Number(holdings.value).toFixed(8),
+                    'value': valueLC
+                }
+            ]
+        }
+        localStorage.setItem('assets', JSON.stringify(assets));
+    } else {
+        assets = JSON.parse(localStorage.getItem('assets'))
+        asset = {
+            'name': symbol,
+            'price': priceText,
+            'holdings': Number(holdings.value).toFixed(8),
+            'value': valueLC
+        }
+        assets.children.push(asset);
+        console.log(asset)
+        console.log(assets)
+        localStorage.setItem('assets', JSON.stringify(assets));
+    }
 };
 // add event listener to submit btn
 addHoldingsBtn.addEventListener('click', submitSelection);
 
+// pageRefresh Function runs on every refresh, extractin data from localStorage
+const pageRefresh = () => {
+    if (!JSON.parse(localStorage.getItem('assets'))) {
+        return;
+    } else {
+        assets = JSON.parse(localStorage.getItem('assets'))
+        assets.children.forEach(element => {
+            console.log(element)
 
+            trElement = document.createElement('tr');
+            tdAssetNameElement = document.createElement('td');
+            tdAssetPriceElement = document.createElement('td');
+            tdAssetHoldingsElement = document.createElement('td');
+            tdValueLCElement = document.createElement('td');
+            
+            tdAssetNameElement.innerHTML = element.name;
+            tdAssetPriceElement.innerHTML = element.price;
+            tdAssetHoldingsElement.innerHTML = element.holdings;
+            tdValueLCElement.innerHTML = `$${element.value.toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+            
+            trElement.append(tdAssetNameElement);
+            trElement.append(tdAssetPriceElement);
+            trElement.append(tdAssetHoldingsElement);
+            trElement.append(tdValueLCElement);
+            cryptoTableBody.append(trElement);
 
+            portfolioValue += element.value;
+            assetValueElement.innerHTML = `$${Number(portfolioValue).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        })
+        
+        
+    }
+}
 
+pageRefresh();
 
-
-
-
-
-//Constantes establecidas ignore*
-const cryptoSearch = document.getElementById("cryptoSearch")
-// const cryptoRows = document.getElementsByTagName("span")
-const cryptoRows = document.querySelector('#cryptoRows')
-const cryptoTableBody = document.querySelector('#cryptoTableBody')
 
 const api_url = "https://api.binance.com/api/v3/ticker/price?symbols=[%22ETHUSDT%22,%22BTCUSDT%22,%22XRPUSDT%22,%22DAIUSDT%22,%22LTCUSDT%22,%22BCHUSDT%22,%22AAVEUSDT%22,%22ADAUSDT%22,%22APEUSDT%22,%22AXSUSDT%22,%22BATUSDT%22,%22CHZUSDT%22,%22COMPUSDT%22,%22CRVUSDT%22,%22DYDXUSDT%22,%22ENJUSDT%22,%22FTMUSDT%22,%22GALAUSDT%22,%22GRTUSDT%22,%22LINKUSDT%22,%22LRCUSDT%22,%22MANAUSDT%22,%22MATICUSDT%22,%22MKRUSDT%22,%22OMGUSDT%22,%22QNTUSDT%22,%22SANDUSDT%22,%22SHIBUSDT%22,%22SNXUSDT%22,%22SOLUSDT%22,%22SUSHIUSDT%22,%22UNIUSDT%22,%22YFIUSDT%22]";
 async function getCrypto() {
@@ -208,53 +272,13 @@ async function getCrypto() {
         let cryptoSymbolRaw = item.symbol;
         let cryptoSymbol = cryptoSymbolRaw.replace('USDT', '')
         let cryptoPriceRaw = item.price;
-        let cryptoPrice = Math.round(parseFloat(cryptoPriceRaw),0).toLocaleString();
+        let cryptoPrice = Number(cryptoPriceRaw).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+        cryptoBtnIndividual.setAttribute('data-category', 'Crypto')
         cryptoBtnIndividual.setAttribute('data-symbol', cryptoSymbol)
         cryptoBtnIndividual.setAttribute('data-price', cryptoPriceRaw)
-        cryptoBtnIndividual.style.cssText = 'display:block; width: 100%;'
-        cryptoBtnIndividual.innerHTML = `${cryptoSymbol} - $${cryptoPrice}`
-        
-        // add event listener to btns
+        cryptoBtnIndividual.style.cssText = 'display:block; width: 100%; text-align:justify; padding: 0 calc(50% - 30%/2);'
+        cryptoBtnIndividual.innerHTML = `${cryptoSymbol}: $${cryptoPrice}`
         cryptoBtnIndividual.addEventListener('click', btnSelection)
-        //     step2.style.cssText = 'display:none';
-        //     step3.style.cssText= 'display:block';
-
-        //     trElement = document.createElement('tr');
-        //     tdAssetNameElement = document.createElement('td');
-        //     tdAssetPriceElement = document.createElement('td');
-        //     tdAssetHoldingsElement = document.createElement('td');
-        //     tdValueLCElement = document.createElement('td');
-
-        //     tdAssetNameElement.innerHTML = cryptoSymbol;
-        //     tdAssetPriceElement.innerHTML = cryptoPrice;
-            
-        //     console.log(portfolioValue)
-            
-            // // add event listener to submit btn
-            // addHoldingsBtn.addEventListener('click', (event) => {
-            //     event.preventDefault();
-            //     event.stopPropagation();
-            //     console.log(portfolioValue)
-            //     currentFX = 20; // CAMBIAR CUANDO SE TENGA EL API
-            //     valueLC = (cryptoPriceRaw * parseInt(holdings.value)) * currentFX;
-            //     tdAssetHoldingsElement.innerHTML = parseFloat(holdings.value).toFixed(8);
-            //     tdValueLCElement.innerHTML = ((cryptoPriceRaw * parseFloat(holdings.value)) * currentFX).toLocaleString();
-            //     trElement.append(tdAssetNameElement);
-            //     trElement.append(tdAssetPriceElement);
-            //     trElement.append(tdAssetHoldingsElement);
-            //     trElement.append(tdValueLCElement);
-            //     cryptoTableBody.append(trElement);
-
-            //     portfolioValue += valueLC;
-            //     console.log(portfolioValue)
-
-            //     assetValueElement.innerHTML = `$${parseFloat(portfolioValue).toLocaleString()}`;
-            // })
-        // });
-
-
-
-        // append individual buttons to table
         step2.append(cryptoBtnIndividual)
     })
 
