@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Stock/Crypto Portfolio</title>
+</head>
+
+<body>
+
+
+    <!--Modal and its contents .-->
+    <div id="mymodal" class = "modal">
+
+        <div class="modal-content">
+            <span id="close">&times;</span>
+
+            <div class = "search-wrapper">
+                
+                <label for ="search">Select Asset</label>
+                <div id="step-1">
+                    <ul>
+                        <li><button id="cryptobtn">Crypto</button></li>
+                        <li><button id="stockbtn">Stock</button></li>
+                        <li><button id="currencybtn">Currency</button></li>
+                    </ul>
+                </div>
+
+                <div id="step-3">
+                    <p id="holdingsHeader">Enter the amount of your asset</p>
+                    <form>
+                        <input type="text" id = "holdings" placeholder="Enter amount:">
+                        <button id="addHoldings">Submit</button>
+                    </form>
+                </div>
+
+                <div id="step-2">
+                    <input type="text" id ="cryptoSearch" placeholder="Search Crypto...">
+                    <div id="cryptoRows"></div>
+                    <!-- <table class = "cryptoTable">
+                        <tbody class =cryptoRows>
+                            <tr> <button id="btc">aqui</button></tr>
+                            <tr> <button id="eth">aqui</button></tr>
+                            <tr> <button id="ltc">aqui</button></tr>
+                            <tr> <button id="ada">aqui</button></tr>
+                            <tr> <button id="xrp">aqui</button></tr>
+                            <tr> <button id="link">aqui</button></tr>
+                            <tr> <button id="bat">aqui</button></tr>
+                            <tr> <button id="omg">aqui</button></tr>
+                            <tr> <button id="enj">aqui</button></tr>
+                            <tr> <button id="matic">aqui</button></tr>
+                            <tr> <button id="ftm">aqui</button></tr>
+                            <tr> <button id="chz">aqui</button></tr>
+                            <tr> <button id="bch">aqui</button></tr>
+                            <tr> <button id="sol">aqui</button></tr>
+                            <tr> <button id="lrc">aqui</button></tr>
+                            <tr> <button id="comp">aqui</button></tr>
+                            <tr> <button id="snx">aqui</button></tr>
+                            <tr> <button id="mkr">aqui</button></tr>
+                            <tr> <button id="dai">aqui</button></tr>
+                            <tr> <button id="mana">aqui</button></tr>
+                            <tr> <button id="yfi">aqui</button></tr>
+                            <tr> <button id="crv">aqui</button></tr>
+                            <tr> <button id="sand">aqui</button></tr>
+                            <tr> <button id="sushi">aqui</button></tr>
+                            <tr> <button id="uni">aqui</button></tr>
+                            <tr> <button id="aave">aqui</button></tr>
+                            <tr> <button id="axs">aqui</button></tr>
+                            <tr> <button id="grt">aqui</button></tr>
+                            <tr> <button id="shib">aqui</button></tr>
+                            <tr> <button id="qnt">aqui</button></tr>
+                            <tr> <button id="dydx">aqui</button></tr>
+                            <tr> <button id="gala">aqui</button></tr>
+                            <tr> <button id="ape">aqui</button></tr>
+                        </tbody>
+                    </table> -->
+                </div>
+
+         
+            </div>
+        </div>
+    </div>
+
+    <div class="mainDiv">
+
+        <div class="portfolioValue">
+            <h1>Portfolio <br> Value</h1>
+
+            <!-- <p> to insert assets value -->
+            <p id="assetValue">$0.00</p>
+        </div>
+
+        <div class="assets">
+            <!-- table to organize assets -->
+            <table id="cryptoTable"> <!--HACER ESTO UN SOLO DIV QUE AGARRE LA INFORMACION DE LOCAL STORAGE. SI NO HAY NADA SIMPLEMENTE NO SE DEMUESTRA NADA.-->
+                <tbody id="cryptoTableBody">
+                    <tr id="cryptoHeader">
+                        <th>Asset</th>
+                        <th>Price</th>
+                        <th>Holdings</th>
+                        <th>Local value</th>
+                    </tr>
+                    <tr id="cryptoAsset">
+                        <td id = assetName> </td>
+                        <td id = assetPrice> </td>
+                        <td id = assetHoldings> </td>
+                        <td id = valueMXN> </td>
+                    </tr>
+                </tbody>
+            </table>
+            <!-- Graph w/ D3.js  -->
+            <img src="./assets/pieChart.jpeg" alt="Pie Chart">
+
+            
+            <!---This button opens up the modal-->
+            <button id = "assetbtn">Assets +</button>
+
+
+        </div>
+
+
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
