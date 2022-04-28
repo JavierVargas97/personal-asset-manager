@@ -1,27 +1,28 @@
-const dataURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json';
-const dataUrl2 = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json'
+// const dataURL = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/movie-data.json';
+// const dataUrl2 = 'https://cdn.freecodecamp.org/testable-projects-fcc/data/tree_map/video-game-sales-data.json'
 
 
 const canvas = d3.select('#canvas');
 const toolTip = d3.select('#tool-tip');
 const legend = d3.select('#legend')
 
-const width = 954;
-const height = 600;
+const width = 300;
+const height = 300;
 const format = d3.format(",d") // from https://github.com/d3/d3-format
 
-// Step 1: Read dataUrl and call render function
-const data = async () => {
-    try {
-        const response = await d3.json(dataURL);
-        const data = await response;
-        render(data);
-    } catch (error) {
-        console.log(error);
-    }
-};
+// // Step 1: Read dataUrl and call render function
+// const data = async () => {
+//     try {
+//         const response = await d3.json(dataURL);
+//         const data = await response;
+//         render(data);
+//     } catch (error) {
+//         console.log(error);
+//     }
+// };
 
 const render = data => {
+    document.querySelector('#canvas').innerHTML = ""; // Needed to ensure canvas is wiped out on page refreshes
     // Step 2: Create the Hierarchy to use in the Treemap
     const hierarchy = d3.hierarchy(data)
         .sum(d => d.value) // Sum every children values
@@ -134,5 +135,5 @@ const render = data => {
 
 
 
-data();
+// data();
 

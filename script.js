@@ -221,6 +221,7 @@ const submitSelection = (event) => {
         console.log(assets)
         localStorage.setItem('assets', JSON.stringify(assets));
     }
+    render(JSON.parse(localStorage.getItem('assets')));
 };
 // add event listener to submit btn
 addHoldingsBtn.addEventListener('click', submitSelection);
@@ -254,7 +255,7 @@ const pageRefresh = () => {
             portfolioValue += element.value;
             assetValueElement.innerHTML = `$${Number(portfolioValue).toLocaleString('en-US', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
         })
-        
+        render(JSON.parse(localStorage.getItem('assets')));
         
     }
 }

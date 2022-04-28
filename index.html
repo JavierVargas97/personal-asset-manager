@@ -5,8 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-    <link rel="stylesheet" href="./css/style.css">
     <title>Stock/Crypto Portfolio</title>
+    <link rel="stylesheet" href="./d3/d3.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <script src="./d3/d3.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
@@ -40,43 +44,6 @@
                 <div id="step-2">
                     <input type="text" id ="cryptoSearch" placeholder="Search Crypto...">
                     <div id="cryptoRows"></div>
-                    <!-- <table class = "cryptoTable">
-                        <tbody class =cryptoRows>
-                            <tr> <button id="btc">aqui</button></tr>
-                            <tr> <button id="eth">aqui</button></tr>
-                            <tr> <button id="ltc">aqui</button></tr>
-                            <tr> <button id="ada">aqui</button></tr>
-                            <tr> <button id="xrp">aqui</button></tr>
-                            <tr> <button id="link">aqui</button></tr>
-                            <tr> <button id="bat">aqui</button></tr>
-                            <tr> <button id="omg">aqui</button></tr>
-                            <tr> <button id="enj">aqui</button></tr>
-                            <tr> <button id="matic">aqui</button></tr>
-                            <tr> <button id="ftm">aqui</button></tr>
-                            <tr> <button id="chz">aqui</button></tr>
-                            <tr> <button id="bch">aqui</button></tr>
-                            <tr> <button id="sol">aqui</button></tr>
-                            <tr> <button id="lrc">aqui</button></tr>
-                            <tr> <button id="comp">aqui</button></tr>
-                            <tr> <button id="snx">aqui</button></tr>
-                            <tr> <button id="mkr">aqui</button></tr>
-                            <tr> <button id="dai">aqui</button></tr>
-                            <tr> <button id="mana">aqui</button></tr>
-                            <tr> <button id="yfi">aqui</button></tr>
-                            <tr> <button id="crv">aqui</button></tr>
-                            <tr> <button id="sand">aqui</button></tr>
-                            <tr> <button id="sushi">aqui</button></tr>
-                            <tr> <button id="uni">aqui</button></tr>
-                            <tr> <button id="aave">aqui</button></tr>
-                            <tr> <button id="axs">aqui</button></tr>
-                            <tr> <button id="grt">aqui</button></tr>
-                            <tr> <button id="shib">aqui</button></tr>
-                            <tr> <button id="qnt">aqui</button></tr>
-                            <tr> <button id="dydx">aqui</button></tr>
-                            <tr> <button id="gala">aqui</button></tr>
-                            <tr> <button id="ape">aqui</button></tr>
-                        </tbody>
-                    </table> -->
                 </div>
 
          
@@ -113,6 +80,7 @@
             </table>
             <!-- Graph w/ D3.js  -->
             <img src="./assets/pieChart.jpeg" alt="Pie Chart">
+            <!-- <div id="canvas"></div> -->
 
             
             <!---This button opens up the modal-->
@@ -124,8 +92,6 @@
 
 
     </div>
-
-    <script src="script.js"></script>
-
+    <div id="canvas"></div>
 </body>
 </html>
