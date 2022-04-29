@@ -48,9 +48,13 @@ const btnSelection = (event) => {
 
     trElement = document.createElement('tr');
     tdAssetNameElement = document.createElement('td');
+    tdAssetNameElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
     tdAssetPriceElement = document.createElement('td');
+    tdAssetPriceElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
     tdAssetHoldingsElement = document.createElement('td');
+    tdAssetHoldingsElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
     tdValueLCElement = document.createElement('td');
+    tdValueLCElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
 
     tdAssetNameElement.innerHTML = symbol;
     tdAssetPriceElement.innerHTML = priceText;

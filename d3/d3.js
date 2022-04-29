@@ -6,7 +6,7 @@ const canvas = d3.select('#canvas');
 const toolTip = d3.select('#tool-tip');
 const legend = d3.select('#legend')
 
-const width = 300;
+const width = 400;
 const height = 300;
 const format = d3.format(",d") // from https://github.com/d3/d3-format
 

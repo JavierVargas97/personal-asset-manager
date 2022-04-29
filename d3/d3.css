@@ -3,8 +3,8 @@ h1 {
 }
 
 #canvas {
-    max-width:30vw;
-    margin: auto;
+    /* max-width:30vw; */
+    /* margin: auto; */
 }
 
 #tool-tip {
