@@ -11,46 +11,119 @@
 </head>
 
 <body>
+    
+    <!-- Modal and its contents .
+    <div id="mymodal" class = "modal">
 
-    <div class="flex flex-col h-screen justify-center mx-auto md:max-w-2xl">
+        <div class="modal-content">
+            <span class="close">&times;</span>
 
-        <div class="flex justify-around pb-10 items-center flex-row md:h-full md:w-48">
-            <h1 class="text-7xl font-bold">Portfolio <br> Value</h1>
+            <div class = "search-wrapper">
+            <label for ="search">Select Asset</label>
+            <ul>
+                <li><button id="cryptobtn">Crypto</button></li>
+                <li><button id="stockbtn">Stock</button></li>
+                <li><button id="currencybtn">Currency</button></li>
+            </ul>
 
-            <!-- <p> to insert assets value -->
-            <p class="text-5xl">$6,000</p>
+            <p id="holdingsHeader">Enter the amount of your asset</p>
+            <input type = "text" id = "holdings" placeholder="Enter amount:">
+            <button id = "addHoldings">Submit</button>
+            
+
+            <input type="text" id ="cryptoSearch" placeholder="Search Crypto...">
+            <table class = "cryptoTable">
+                <tbody class =cryptoRows>
+                    <tr> <button id="btc">aqui</button></tr>
+                    <tr> <button id="eth">aqui</button></tr>
+                    <tr> <button id="ltc">aqui</button></tr>
+                    <tr> <button id="ada">aqui</button></tr>
+                    <tr> <button id="xrp">aqui</button></tr>
+                    <tr> <button id="link">aqui</button></tr>
+                    <tr> <button id="bat">aqui</button></tr>
+                    <tr> <button id="omg">aqui</button></tr>
+                    <tr> <button id="enj">aqui</button></tr>
+                    <tr> <button id="matic">aqui</button></tr>
+                    <tr> <button id="ftm">aqui</button></tr>
+                    <tr> <button id="chz">aqui</button></tr>
+                    <tr> <button id="bch">aqui</button></tr>
+                    <tr> <button id="sol">aqui</button></tr>
+                    <tr> <button id="lrc">aqui</button></tr>
+                    <tr> <button id="comp">aqui</button></tr>
+                    <tr> <button id="snx">aqui</button></tr>
+                    <tr> <button id="mkr">aqui</button></tr>
+                    <tr> <button id="dai">aqui</button></tr>
+                    <tr> <button id="mana">aqui</button></tr>
+                    <tr> <button id="yfi">aqui</button></tr>
+                    <tr> <button id="crv">aqui</button></tr>
+                    <tr> <button id="sand">aqui</button></tr>
+                    <tr> <button id="sushi">aqui</button></tr>
+                    <tr> <button id="uni">aqui</button></tr>
+                    <tr> <button id="aave">aqui</button></tr>
+                    <tr> <button id="axs">aqui</button></tr>
+                    <tr> <button id="grt">aqui</button></tr>
+                    <tr> <button id="shib">aqui</button></tr>
+                    <tr> <button id="qnt">aqui</button></tr>
+                    <tr> <button id="dydx">aqui</button></tr>
+                    <tr> <button id="gala">aqui</button></tr>
+                    <tr> <button id="ape">aqui</button></tr>
+                </tbody>
+            </table>
+
+
+         
+            </div>
         </div>
+    </div> -->
 
-        <div class="flex justify-around items-center">
+
+    <div class="mainDiv grid md:grid-cols-4 md:grid-rows-2 grid-cols-1 grid-rows-5 gap-10 justify-center h-screen content-center">
+        <div class="p-1 bg-sky-900 text-white col-span-2 flex justify-center text-7xl font-bold justify-around items-center
+        md:text-5xl sm:text-4xl lg:text-7xl">
+            <h1>Portfolio <br> Value</h1>
+        </div>
+        <div class="md:text-5xl sm:text-4xl lg:text-7xl bg-red-400 text-white col-span-2 flex justify-center items-center text-5xl">
+            <!-- <p> to insert assets value -->
+            <p>$6,000</p>
+        </div>
+        
+        <div class="bg-sky-900 col-span-2 flex-row self-star ml-4 text-white">
             <!-- table to organize assets -->
 
-            <table class="flex flex-col self-start">
+            <table class="col-span-1">
                 <tr>
-                    <th class="p-2.5 text-4xl">Asset</th>
-                    <th class="p-2.5 text-4xl">Value</th>
-                    <th class="p-2.5 text-4xl">Local value</th>
+                    <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Asset</th>
+                    <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Price</th>
+                    <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Value</th>
+                    <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Local value</th>
+                </tr>
+                <tr id="cryptoAsset">
+                    <td id = assetName> </td>
+                    <td id = assetPrice> </td>
+                    <td id = assetHoldings> </td>
+                    <td id = valueMXN> </td>
                 </tr>
                 <tr class="addedAsset">
-                    <td class="p-2.5 text-xl">Crypto</td>
-                    <td class="p-2.5 text-xl">1 BTC</td>
-                    <td class="p-2.5 text-xl">$828,967</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">Crypto</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">1 BTC</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">$828,967</td>
                 </tr>
                 <tr>
-                    <td class="p-2.5 text-xl">Tesla</td>
-                    <td class="p-2.5 text-xl">1 TSL</td>
-                    <td class="p-2.5 text-xl">$20,649</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">Tesla</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">1 TSL</td>
+                    <td class="p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1">$20,649</td>
                 </tr>
             </table>
-            <!-- Graph w/ D3.js  -->
-            <img src="../assets/pieChart.jpeg" alt="Pie Chart" class="object-scale-down w-400px h-300px">
-
-            <button class="self-start border-2 border-solid border-black ">Assets +</button>
-
-
         </div>
-
+        <div class="bg-sky-900 col-span-1 object-scale-down flex-row w-400px h-300px md:flex">
+            <!-- Graph w/ D3.js  -->
+            <img src="../assets/pieChart.jpeg" alt="Pie Chart">
+        </div>
+        <div class="col-span-1 self-start mr-4 text-center flex justify-center md:justify-end
+        px-4 py-1 text-sm text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+            <button>Assets +</button>
+        </div>
     </div>
-
     <!-- <script src="../js/script.js"></script> -->
 
 </body>
