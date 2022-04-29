@@ -146,6 +146,10 @@ See `LICENSE` for more information.
 
 Richard Guarnieri: richard.gm@outlook.com · LinkedIn: [rguarnieri][linkedin-url] · Twitter: [@ric_guarnieri][twitter-url]
 
+Panlo García: pgarciag566@gmail.com · LinkedIn: [https://www.linkedin.com/in/pablo-garc%C3%ADa-08842621b/] · Twitter: [@pablogarcia5667][https://twitter.com/pablogarcia5667]
+
+
+
 Application URL: [https://example.com/][application-url]
 
 
