@@ -25,25 +25,25 @@
 
             <div class = "search-wrapper">
                 
-                <label id='select-asset-label' for ="search">Select Asset</label>
-                <div id="step-1">
+                <label id='select-asset-label' for ="search" class="text-4x1">Select Asset</label>
+                <div id="step-1" class="items-center flex justify-center">
                     <ul>
-                        <li><button id="cryptobtn">Crypto</button></li>
-                        <li><button id="stockbtn">Stock</button></li>
-                        <li><button id="currencybtn">Currency</button></li>
+                        <li><button id="cryptobtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Crypto</button></li>
+                        <li><button id="stockbtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Stock</button></li>
+                        <li><button id="currencybtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Currency</button></li>
                     </ul>
                 </div>
 
                 <div id="step-3">
-                    <p id="holdingsHeader">Enter the amount of your asset</p>
-                    <form>
-                        <input type="text" id = "holdings" placeholder="Enter amount:">
-                        <button id="addHoldings">Submit</button>
+                    <p id="holdingsHeader" class="text-xl">Enter the amount of your asset</p>
+                    <form class="text-center">
+                        <input type="text" id = "holdings" class="text-xl" placeholder="Enter amount:">
+                        <button id="addHoldings" class="px-4 py-1 shrink text-center mx-auto flex justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Submit</button>
                     </form>
                 </div>
 
                 <div id="step-2">
-                    <input type="text" id ="cryptoSearch" placeholder="Search Crypto...">
+                    <input type="text" id ="cryptoSearch" class="text-xl" placeholder="Search Crypto...">
                     <div id="cryptoRows"></div>
                 </div>
 
@@ -58,20 +58,20 @@
         md:text-5xl sm:text-4xl lg:text-7xl">
             <h1>Portfolio <br> Value</h1>
         </div>
-        <div class="md:text-5xl sm:text-4xl lg:text-7xl bg-red-400 text-white col-span-2 flex justify-center items-center text-5xl">
+        <div class="bg-red-400 text-white col-span-2 flex text-left items-center">
             <!-- <p> to insert assets value -->
-            <p id="assetValue">$0.00</p>
+            <p id="assetValue" class= "text-center text-4xl md:text-5xl lg:text-7xl">$0.00</p>
         </div>
 
-        <div class="assets bg-sky-900 col-span-2 flex-row self-star ml-4 text-white">
+        <div class="bg-red-400 col-span-2 flex-row self-star ml-4 text-white">
             <!-- table to organize assets -->
             <table id="cryptoTable" class="col-span-1"> <!--HACER ESTO UN SOLO DIV QUE AGARRE LA INFORMACION DE LOCAL STORAGE. SI NO HAY NADA SIMPLEMENTE NO SE DEMUESTRA NADA.-->
                 <tbody id="cryptoTableBody">
                     <tr id="cryptoHeader">
-                        <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Asset</th>
-                        <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Price</th>
-                        <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Value</th>
-                        <th class="col-span-2 p-2.5 lg:text-4xl md:text-4x1 sm:text-3x1">Local value</th>
+                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Asset</th>
+                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Price</th>
+                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Value</th>
+                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Local value</th>
                     </tr>
                     <tr id="cryptoAsset">
                         <td id = assetName> </td>

@@ -82,7 +82,7 @@ ul{
 }
 
 
-#cryptobtn{
+/* #cryptobtn{
     background-color: #3D426B;
     border-radius: 10px;
     padding: 10px;
@@ -91,9 +91,9 @@ ul{
     font-weight: bold;
     color: white;
     
-}
+} */
 
-#stockbtn{
+/* #stockbtn{
     background-color: #3D426B;
     border-radius: 10px;
     padding: 10px;
@@ -111,7 +111,7 @@ ul{
     font-size: 30px;
     font-weight: bold;
     color: white;
-}
+} */
 
 #cryptoSearch {
     display: block;
@@ -150,13 +150,13 @@ p{
 }
 
 /* Portfolio header and total value styling */
-.portfolioValue{
+/* .portfolioValue{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     padding-bottom: 40px;
-}
+} */
 
 /* Assets, graph and button styling */
 .assets {

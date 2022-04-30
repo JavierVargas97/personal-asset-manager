@@ -48,13 +48,13 @@ const btnSelection = (event) => {
 
     trElement = document.createElement('tr');
     tdAssetNameElement = document.createElement('td');
-    tdAssetNameElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
+    tdAssetNameElement.classList.add ("p-2.5", "lg:text-3xl", "md:text-3x1", "sm:text-2x1");
     tdAssetPriceElement = document.createElement('td');
-    tdAssetPriceElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
+    tdAssetPriceElement.classList.add ("p-2.5", "lg:text-3xl", "md:text-3x1", "sm:text-2x1");
     tdAssetHoldingsElement = document.createElement('td');
-    tdAssetHoldingsElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
+    tdAssetHoldingsElement.classList.add ("p-2.5", "lg:text-3xl", "md:text-3x1", "sm:text-2x1");
     tdValueLCElement = document.createElement('td');
-    tdValueLCElement.style.cssText = "p-2.5 lg:text-3xl md:text-3x1 sm:text-2x1";
+    tdValueLCElement.classList.add ("p-2.5", "lg:text-3xl", "md:text-3x1", "sm:text-2x1");
 
     tdAssetNameElement.innerHTML = symbol;
     tdAssetPriceElement.innerHTML = priceText;
@@ -166,7 +166,7 @@ const getCrypto = async () => {
         cryptoBtnIndividual.setAttribute('data-category', 'Crypto')
         cryptoBtnIndividual.setAttribute('data-symbol', cryptoSymbol)
         cryptoBtnIndividual.setAttribute('data-price', cryptoPriceRaw)
-        cryptoBtnIndividual.style.cssText = 'display:block; width: 100%; text-align:justify; padding: 0 calc(50% - 30%/2);'
+        cryptoBtnIndividual.classList.add("px-4", "py-1", "shrink", "text-center", "mx-auto", "flex", "justify-center", "block", "text-lg", "text-neutral-900", "rounded-full", "border", "border-amber-400", "hover:text-white", "hover:bg-amber-400", "hover:border-transparent", "focus:outline-none", "focus:ring-2", "focus:ring-purple-600", "focus:ring-offset-2");
         cryptoBtnIndividual.innerHTML = `${cryptoSymbol}: $${cryptoPrice}`
         cryptoBtnIndividual.addEventListener('click', btnSelection)
         step2.append(cryptoBtnIndividual)
