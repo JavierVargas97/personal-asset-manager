@@ -15,35 +15,35 @@
 </head>
 
 
-<body>
+<body class = "bg-gray-700">
     <!--Modal and its contents .-->
     <div id="mymodal" class = "modal">
 
-        <div class="modal-content">
+        <div class="modal-content bg-gray-600">
             <span id="close">&times;</span>
 
             <div class = "search-wrapper">
                 
-                <label id='select-asset-label' for ="search" class="text-4x1">Select Asset</label>
-                <div id="step-1" class="items-center flex justify-center">
+                <label id='select-asset-label' for ="search" class="text-4x1 text-white">Select Asset</label>
+                <div id="step-1" class="flex justify-evenly">
                     <ul>
-                        <li><button id="cryptobtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Crypto</button></li>
-                        <li><button id="stockbtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Stock</button></li>
-                        <li><button id="currencybtn" class="px-4 py-1 shrink text-center justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Currency</button></li>
+                        <li><button id="cryptobtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Crypto</button></li>
+                        <li><button id="stockbtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Stock</button></li>
+                        <li><button id="currencybtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Currency</button></li>
                     </ul>
                 </div>
 
                 <div id="step-3">
-                    <p id="holdingsHeader" class="text-xl">Enter the amount of your asset</p>
+                    <p id="holdingsHeader" class="text-xl text-white">Enter the amount of your asset</p>
                     <form class="text-center">
-                        <input type="text" id = "holdings" class="text-xl" placeholder="Enter amount:">
-                        <button id="addHoldings" class="px-4 py-1 shrink text-center mx-auto flex justify-center text-lg text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Submit</button>
+                        <input type="text" id = "holdings" class="text-xl rounded" placeholder="Enter amount:">
+                        <button id="addHoldings" class="px-4 py-1 shrink text-center mx-auto flex justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Submit</button>
                     </form>
                 </div>
 
                 <div id="step-2">
                     <input type="text" id ="cryptoSearch" class="text-xl" placeholder="Search Crypto...">
-                    <div id="cryptoRows"></div>
+                    <div id="cryptoRows" class="bg-blue-400"></div>
                 </div>
 
             </div>
@@ -51,33 +51,34 @@
     </div>
 
     <!-- Complete Portfolio -->
-<div class="mainDiv grid grid-cols-1 auto-rows-auto gap-5 md:gap-10 justify-center content-center md:grid-cols-4 md:grid-rows-2">
+<div class="mainDiv grid grid-cols-1 auto-rows-auto justify-center content-center md:grid-cols-4 md:grid-rows-2">
     <!-- Title -->
-    <div class="bg-sky-900 text-white row-span-1 md:col-span-2 flex justify-center font-bold items-center text-4xl md:text-5xl">
+    <div class="bg-gray-700 text-white row-span-1 md:col-span-2 md:justify-evenly flex justify-evenly font-bold items-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl">
         <h1>Portfolio Value</h1>
     </div>
     <!-- Personal Assets -->
-    <div class="text-4xl md:text-5xl bg-red-400 text-white row-span-1 md:col-span-2 flex justify-center items-center">
+    <div class="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl bg-gray-700 text-white row-span-1 md:col-span-2 flex justify-center items-center">
         <!-- Asset values sum show here -->
         <p id="assetValue">$0.00</p>
     </div>
 
     <!-- table to organize assets -->
-    <div class="flex bg-sky-900 row-span-1 md:col-span-2 flex-row text-white">
+    <div class="flex bg-gray-700 row-span-1 md:col-span-2 flex-col text-white text-center ">
         <table id="cryptoTable" class="">
             <!--Table that shows the added crypto or stock. Nothing's shown w/ no added values-->
-            <tbody id="cryptoTableBody">
+            <tbody id="cryptoTableBody" >
                 <tr id="cryptoHeader">
-                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Asset</th>
-                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Price</th>
-                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Value</th>
-                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Local value</th>
+                    <th class="col-span-2 p-3 md:p-4 text-5xl md:text-2xl lg:text-4xl xl:text-4xl ">Asset</th>
+                    <th class="col-span-2 p-3 md:p-4 text-5xl md:text-2xl lg:text-4xl xl:text-4xl ">Price</th>
+                    <th class="col-span-2 p-3 md:p-4 text-5xl md:text-2xl lg:text-4xl xl:text-4xl">Quantity</th>
+                    <th class="col-span-2 p-3 md:p-4 text-5xl md:text-2xl lg:text-4xl xl:text-4xl ">Value</th>
                 </tr>
+
                 <tr id="cryptoAsset">
-                    <td id=assetName class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
-                    <td id=assetPrice class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
-                    <td id=assetHoldings class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
-                    <td id=valueMXN class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
+                    <td id=assetName class="col-span-2 p-3 md:p-4 text-6xl md:text-2xl lg:text-4xl xl:text-5xl"> </td>
+                    <td id=assetPrice class="col-span-2 p-3 md:p-4 text-6xl md:text-2xl lg:text-4xl xl:text-5xl"> </td>
+                    <td id=assetHoldings class="col-span-2 p-3 md:p-4 text-6xl md:text-2xl lg:text-4xl xl:text-5xl"> </td>
+                    <td id=valueMXN class="col-span-2 p-3 md:p-4 text-6xl md:text-2xl lg:text-4xl xl:text-5xl"> </td>
                 </tr>
             </tbody>
         </table>
@@ -85,12 +86,12 @@
 
     <!-- Button and Graph -->
     <div class="flex flex-col row-span-1 md:col-span-2">
-        <div class="flex rounded-full border border-amber-400">
+        <div class="flex rounded-full border border-gray-400">
             <!---This button opens up the modal-->
-            <button id="assetbtn" class="px-4 py-1 grow text-sm text-amber-400 font-semibold hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Assets +</button>
+            <button id="assetbtn" class=" px-4 py-1 grow text-xl2 bg-blue-900 rounded-full text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Assets +</button>
         </div>
         <!-- Graph w/ D3.js  -->
-        <div id="canvas" class="flex bg-sky-900 object-scale-down xl:grow">
+        <div id="canvas" class="flex justify-evenly bg-gray-700 object-scale-down md:grow">
         </div>
     </div>
 </div>

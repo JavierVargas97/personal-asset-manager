@@ -166,7 +166,7 @@ const getCrypto = async () => {
         cryptoBtnIndividual.setAttribute('data-category', 'Crypto')
         cryptoBtnIndividual.setAttribute('data-symbol', cryptoSymbol)
         cryptoBtnIndividual.setAttribute('data-price', cryptoPriceRaw)
-        cryptoBtnIndividual.classList.add("px-4", "py-1", "shrink", "text-center", "mx-auto", "flex", "justify-center", "block", "text-lg", "text-neutral-900", "rounded-full", "border", "border-amber-400", "hover:text-white", "hover:bg-amber-400", "hover:border-transparent", "focus:outline-none", "focus:ring-2", "focus:ring-purple-600", "focus:ring-offset-2");
+        cryptoBtnIndividual.classList.add("px-4", "py-1", "shrink", "text-center", "mx-auto", "flex", "justify-center", "block", "text-lg", "text-neutral-300", "rounded-full", "border", "border-gray-400", "hover:text-white", "hover:bg-gray-400", "hover:border-transparent", "focus:outline-none", "focus:ring-2", "focus:ring-purple-600", "focus:ring-offset-2");
         cryptoBtnIndividual.innerHTML = `${cryptoSymbol}: $${cryptoPrice}`
         cryptoBtnIndividual.addEventListener('click', btnSelection)
         step2.append(cryptoBtnIndividual)
@@ -242,6 +242,6 @@ assetBtn.addEventListener('click', () => {
 cryptoBtn.addEventListener('click', getCrypto);
 
 // Add Event Listener to addHoldingsBtn
-addHoldingsBtn.addEventListener('click', submitSelection);
+addHoldingsBtn.addEventListener('click', submitSelection,);
 
 pageRefresh();
