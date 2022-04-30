@@ -38,11 +38,7 @@ const render = data => {
 
     // Color Scheme: specifying colors for each category
     const categories = data.children.map(d => d.name)     
-    const colors = ['#1C1832', '#9E999D', '#F2259C', '#347EB4', 
-                '#08ACB6', '#91BB91', '#BCD32F', '#75EDB8',
-                "#89EE4B", '#AD4FE8', '#D5AB61', '#BC3B3A',
-                '#F6A1F9', '#87ABBB', '#412433', '#56B870', 
-                '#FDAB41', '#64624F']
+    const colors = ['#FFFFFF']
     const colorScale = d3.scaleOrdinal() // the scale function
         .domain(categories) // the data
         .range(colors);    // the way the data should be shown             
@@ -99,14 +95,14 @@ const render = data => {
         .text(d => `${d.data.name}`)
         .attr('x', 5)
         .attr('y', 15)
-        .attr('fill', 'white')
+        .attr('fill', 'black')
         
     // Append Text - Value
     dataGroup.append('text')
         .text(d => `$${format(d.data.value)}`)
         .attr('x', 5)
         .attr('y', 30)
-        .attr('fill', 'white')
+        .attr('fill', 'black')
 
     // // Legend
     // const svgLegend = legend.append('svg')
