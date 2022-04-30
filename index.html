@@ -83,12 +83,13 @@
 
     <!-- Button and Graph -->
     <div class="flex flex-col row-span-1 md:col-span-2">
-        <div class="flex rounded-full border border-gray-400">
+        <div class="flex">
             <!---This button opens up the modal-->
-            <button id="assetbtn" class=" px-4 py-1 grow text-xl2 bg-blue-900 rounded-full text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Assets +</button>
+            <button id="assetbtn" class=" px-4 py-1 basis-1/2 text-xl2 bg-blue-900 rounded-full border border-gray-400 text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Add Assets</button>
+            <button id="clearBtn" class=" px-4 py-1 basis-1/2 text-xl2 bg-blue-900 rounded-full border border-gray-400 text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Clear Assets</button>
         </div>
         <!-- Graph w/ D3.js  -->
-        <div id="canvas" class="flex justify-evenly bg-gray-700 object-scale-down md:grow">
+        <div id="canvas" class="flex p-5 justify-evenly bg-gray-700 object-scale-down md:grow">
         </div>
     </div>
 </div>

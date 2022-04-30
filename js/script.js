@@ -33,6 +33,13 @@ let priceText;
 let assets = {};
 let asset;
 
+const cleanUp = document.getElementById("clearBtn")
+cleanUp.addEventListener('click', () => {
+    localStorage.clear();
+    location.reload();
+});
+
+
 // btnSelection Event Listener
 const btnSelection = (event) => {
     selectAssetLabel.style.cssText = 'display:none;'
