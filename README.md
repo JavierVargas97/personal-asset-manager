@@ -1,5 +1,3 @@
-# readme
-Personal Asset Manager README.md 
 <!-- This template was created following The Markdown Guide - https://www.markdownguide.org/ -->
 
 <!-- If you are editing this README.md on VS Code, please highlight and replace the following keywords enclosed in backticks (``) using:
@@ -22,23 +20,23 @@ With that in mind, team #3 has developed a tool that helps to keep track of one'
 <!-- These were created using https://shields.io/ - feel free to replace / create yours by modifying links below: -->
 
 <div align="center">
-    <a href="https://github.com/richardguarnieri/readme-template/graphs/contributors">
-        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/richardguarnieri/readme-template?style=for-the-badge">
+    <a href="https://github.com/richardguarnieri/personal-asset-manager/graphs/contributors">
+        <img alt="GitHub contributors" src="https://img.shields.io/github/contributors/richardguarnieri/personal-asset-manager?style=for-the-badge">
     <a>
-     <a href="https://github.com/richardguarnieri/readme-template/network/members">
-        <img alt="GitHub forks" src="https://img.shields.io/github/forks/richardguarnieri/readme-template?style=for-the-badge">
+     <a href="https://github.com/richardguarnieri/personal-asset-manager/network/members">
+        <img alt="GitHub forks" src="https://img.shields.io/github/forks/richardguarnieri/personal-asset-manager?style=for-the-badge">
     <a>
-     <a href="https://github.com/richardguarnieri/readme-template/stargazers">
-        <img alt="GitHub stars" src="https://img.shields.io/github/stars/richardguarnieri/readme-template?style=for-the-badge">
+     <a href="https://github.com/richardguarnieri/personal-asset-manager/stargazers">
+        <img alt="GitHub stars" src="https://img.shields.io/github/stars/richardguarnieri/personal-asset-manager?style=for-the-badge">
     <a>
-     <a href="https://github.com/richardguarnieri/readme-template/issues">
-        <img alt="GitHub issues" src="https://img.shields.io/github/issues/richardguarnieri/readme-template?style=for-the-badge">
+     <a href="https://github.com/richardguarnieri/personal-asset-manager/issues">
+        <img alt="GitHub issues" src="https://img.shields.io/github/issues/richardguarnieri/personal-asset-manager?style=for-the-badge">
     <a>
-     <a href="https://github.com/richardguarnieri/readme-template/blob/main/LICENSE">
-        <img alt="GitHub license" src="https://img.shields.io/github/license/richardguarnieri/readme-template?label=license&style=for-the-badge">
+     <a href="https://github.com/richardguarnieri/personal-asset-manager/blob/main/LICENSE">
+        <img alt="GitHub license" src="https://img.shields.io/github/license/richardguarnieri/personal-asset-manager?label=license&style=for-the-badge">
     <a>
-     <a href="https://github.com/richardguarnieri/readme-template/commits/main">
-        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/richardguarnieri/readme-template?style=for-the-badge">
+     <a href="https://github.com/richardguarnieri/personal-asset-manager/commits/main">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/richardguarnieri/personal-asset-manager?style=for-the-badge">
     <a>
 </div>
 <br>
@@ -46,15 +44,15 @@ With that in mind, team #3 has developed a tool that helps to keep track of one'
 
 <!-- Header -->
 
-//<div align="center">
-    <a href="https://github.com/richardguarnieri/PersonalAssetManager">
+<div align="center">
+    <a href="https://github.com/richardguarnieri/personal-asset-manager">
         <img src="./img/logo.png" alt="Logo" width="300" height="auto">
     </a>
-    <h1 align="center">The README.md Template</h1>
+    <h1 align="center">Personal Asset Manager</h1>
     <div>
-        A README.md template for your projects!
+        A centralized personal portfolio valuation!
         <br>
-        <a href="https://github.com/richardguarnieri/readme-template">
+        <a href="https://github.com/richardguarnieri/personal-asset-manager">
             <strong>Explore Documentation</strong>
         </a>
         <br>
@@ -64,21 +62,18 @@ With that in mind, team #3 has developed a tool that helps to keep track of one'
         <a href="https://github.com/richardguarnieri/personal-asset-manager/issues">Report Bug / Request Feature</a>
     </div>
 </div>
-<br>//
+<br>
 
 
 <!-- Table of Contents -->
 ## Table of Contents
-
-- [readme](#readme)
-  - [Table of Contents](#table-of-contents)
-  - [The Project](#the-project)
+- [The Project](#the-project)
     - [Technology Stack](#technology-stack)
-  - [How to Use](#how-to-use)
+- [How to Use](#how-to-use)
     - [Prerequisites](#prerequisites)
-  - [Contributing](#contributing)
-  - [License](#license)
-  - [Contact](#contact)
+- [Contributing](#contributing)
+- [License](#license)
+- [Contact](#contact)
 <br>
 
 
@@ -94,13 +89,11 @@ The API used to keep track of the cryptocurrency is the Coingecko API: https://a
 
 ### Technology Stack
 
-Use this section to list the technologies used in the project - examples:
-
 * [HTML](https://html.spec.whatwg.org/)
+* [Tailwind](https://tailwindcss.com/)
 * [CSS](https://www.w3.org/TR/CSS/#css)
 * [JavaScript](https://www.ecma-international.org/publications-and-standards/standards/ecma-262/)
-* [Tailwind]
-* [D3]
+* [d3.js](https://d3js.org/)
 
 <p align="right"> - <a href="#home">Return to Home</a></p>
 
@@ -146,30 +139,29 @@ See `LICENSE` for more information.
 
 Richard Guarnieri: richard.gm@outlook.com · LinkedIn: [rguarnieri][linkedin-url] · Twitter: [@ric_guarnieri][twitter-url]
 
-Panlo García: pgarciag566@gmail.com · LinkedIn: [https://www.linkedin.com/in/pablo-garc%C3%ADa-08842621b/] · Twitter: [@pablogarcia5667][https://twitter.com/pablogarcia5667] · Github: [https://github.com/Pablogarciag02]
-
-
+Panlo García: pgarciag566@gmail.com · Github: [Pablogarciag02](https://github.com/Pablogarciag02) · LinkedIn: [pablo-garcía-08842621b](https://www.linkedin.com/in/pablo-garc%C3%ADa-08842621b/) · Twitter: [@pablogarcia5667](https://twitter.com/pablogarcia5667)
 
 Application URL: [https://example.com/][application-url]
 
 
 <!-- References, Links and Images -->
 <!-- Badges / Shields Styles -->
-[github-contributors-shield]: https://img.shields.io/github/contributors/richardguarnieri/readme-template?style=for-the-badge
-[github-forks-shield]: https://img.shields.io/github/forks/richardguarnieri/readme-template?style=for-the-badge
-[github-stars-shield]: https://img.shields.io/github/stars/richardguarnieri/readme-template?style=for-the-badge
-[github-issues-shield]: https://img.shields.io/github/issues/richardguarnieri/readme-template?style=for-the-badge
-[github-license-shield]: https://img.shields.io/github/license/richardguarnieri/readme-template?style=for-the-badge
-[github-last-commit-shield]: https://img.shields.io/github/last-commit/richardguarnieri/readme-template?style=for-the-badge
+[github-contributors-shield]: https://img.shields.io/github/contributors/richardguarnieri/personal-asset-manager?style=for-the-badge
+[github-forks-shield]: https://img.shields.io/github/forks/richardguarnieri/personal-asset-manager?style=for-the-badge
+[github-stars-shield]: https://img.shields.io/github/stars/richardguarnieri/personal-asset-manager?style=for-the-badge
+[github-issues-shield]: https://img.shields.io/github/issues/richardguarnieri/personal-asset-manager?style=for-the-badge
+[github-license-shield]: https://img.shields.io/github/license/richardguarnieri/personal-asset-manager?style=for-the-badge
+[github-last-commit-shield]: https://img.shields.io/github/last-commit/richardguarnieri/personal-asset-manager?style=for-the-badge
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 
 <!-- Badges / Shields URL -->
-[github-contributors-url]: https://github.com/richardguarnieri/readme-template/graphs/contributors
-[github-forks-url]: https://github.com/richardguarnieri/readme-template/network/members
-[github-stars-url]: https://github.com/richardguarnieri/readme-template/stargazers
-[github-issues-url]: https://github.com/richardguarnieri/readme-template/issues
-[github-license-url]: https://github.com/richardguarnieri/readme-template/blob/main/LICENSE
+[github-contributors-url]: https://github.com/richardguarnieri/personal-asset-manager/graphs/contributors
+[github-forks-url]: https://github.com/richardguarnieri/personal-asset-manager/network/members
+[github-stars-url]: https://github.com/richardguarnieri/personal-asset-manager/stargazers
+[github-issues-url]: https://github.com/richardguarnieri/personal-asset-manager/issues
+[github-license-url]: https://github.com/richardguarnieri/personal-asset-manager/blob/main/LICENSE
 [linkedin-url]: https://linkedin.com/in/rguarnieri
 
 <!-- Non Badge / Shield Reference Links -->
-[documentation-url]: https://github.com/richardguarnieri/readme-template
+[documentation-url]: https://github.com/richardguarnieri/personal-asset-manager
+[twitter-url]: https://twitter.com/ric_guarnieri

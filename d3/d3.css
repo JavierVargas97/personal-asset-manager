@@ -1,10 +1,10 @@
-h1 {
+/* h1 {
     text-align: center;
 }
 
 #canvas {
-    /* max-width:30vw; */
-    /* margin: auto; */
+    max-width:30vw;
+    margin: auto;
 }
 
 #tool-tip {
@@ -19,11 +19,12 @@ h1 {
     text-transform: capitalize;
     background: rgba(0, 0, 0, 0.8);
     border-radius: 1rem;
-  }
+  } */
 
 #canvas g:hover rect {
     fill: #B30000;
     stroke: #ffffff;
     transition: fill 0.3s ease-out;
+    cursor: pointer;
   }
   

@@ -7,7 +7,7 @@ const toolTip = d3.select('#tool-tip');
 const legend = d3.select('#legend')
 
 const width = 400;
-const height = 300;
+const height = 250;
 const format = d3.format(",d") // from https://github.com/d3/d3-format
 
 // // Step 1: Read dataUrl and call render function
@@ -108,8 +108,6 @@ const render = data => {
         .attr('y', 30)
         .attr('fill', 'white')
 
-
-
     // // Legend
     // const svgLegend = legend.append('svg')
     //         // .attr("viewBox", [0, 0, window.innerWidth/2, window.innerHeight * .10])
@@ -132,8 +130,6 @@ const render = data => {
     //     .attr("fill", d => colorScale(d.data.category))
     
 }
-
-
 
 // data();
 
