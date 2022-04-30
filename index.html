@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
+    <title>Personal Asset Manager</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- d3.js -->
+    <script src="https://d3js.org/d3.v7.min.js" defer></script>
+    <link rel="stylesheet" href="./d3/d3.css">
+    <script src="./d3/d3.js" defer></script>
+    <!-- css & js-->
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
+</head>
+
+
+<body class = "bg-gray-700">
+    <!--Modal and its contents .-->
+    <div id="mymodal" class = "modal">
+
+        <div class="modal-content bg-gray-600">
+            <span id="close">&times;</span>
+
+            <div class = "search-wrapper">
+                
+                <label id='select-asset-label' for ="search" class="text-4x1 text-white">Select Asset</label>
+                <div id="step-1" class="flex justify-evenly">
+                    <ul class="flex justify-around">
+                        <li><button id="cryptobtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Crypto</button></li>
+                        <li><button id="stockbtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Stock</button></li>
+                        <li><button id="currencybtn" class="px-4 py-1 shrink text-center justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Currency</button></li>
+                    </ul>
+                </div>
+
+                <div id="step-3">
+                    <p id="holdingsHeader" class="text-4x1 text-white">Enter Asset Amount</p>
+                    <form class="text-center">
+                        <input type="text" id = "holdings" class="block w-full h-9 my-3 text-xl p-3 rounded" placeholder="Enter Amount:">
+                        <button id="addHoldings" class="px-4 py-1 shrink text-center mx-auto flex justify-center text-lg text-white font-semibold rounded-full border border-gray-400 hover:text-white hover:bg-blue-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Submit</button>
+                    </form>
+                </div>
+
+                <div id="step-2">
+                    <input type="text" id ="cryptoSearch" class="block w-full h-9 my-3 text-xl p-3 rounded" placeholder="Search Crypto...">
+                    <div id="cryptoRows" class="bg-blue-400"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Complete Portfolio -->
+<div class="mainDiv grid grid-cols-1 auto-rows-auto justify-center content-center md:grid-cols-4 md:grid-rows-2">
+    <!-- Title -->
+    <div class="bg-gray-700 text-white text-center row-span-1 md:col-span-2 md:justify-evenly flex justify-evenly font-bold items-center text-6xl sm:text-7xl md:text-8xl lg:text-9xl xl:text-9xl">
+        <h1>Portfolio Value</h1>
+    </div>
+    <!-- Personal Assets -->
+    <div class="text-5xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl bg-gray-700 text-white row-span-1 md:col-span-2 flex justify-center items-center">
+        <!-- Asset values sum show here -->
+        <p id="assetValue">$0.00</p>
+    </div>
+
+    <!-- table to organize assets -->
+    <div class="flex bg-gray-700 row-span-1 md:col-span-2 flex-col text-white text-center ">
+        <table id="cryptoTable" class="">
+            <!--Table that shows the added crypto or stock. Nothing's shown w/ no added values-->
+            <thead>
+                <tr id="cryptoHeader">
+                    <th class="col-span-2 px-3 pb-3 md:px-4 md:pb-4 text-5xl md:text-xl lg:text-3xl xl:text-4xl ">Asset</th>
+                    <th class="col-span-2 px-3 pb-3 md:px-4 md:pb-4 text-5xl md:text-xl lg:text-3xl xl:text-4xl ">Price</th>
+                    <th class="col-span-2 px-3 pb-3 md:px-4 md:pb-4 text-5xl md:text-xl lg:text-3xl xl:text-4xl">Quantity</th>
+                    <th class="col-span-2 px-3 pb-3 md:px-4 md:pb-4 text-5xl md:text-xl lg:text-3xl xl:text-4xl ">Value</th>
+                </tr>
+            </thead>
+            <tbody id="cryptoTableBody" class=""></tbody>
+        </table>
+    </div>
+
+    <!-- Button and Graph -->
+    <div class="flex flex-col row-span-1 md:col-span-2">
+        <div class="flex">
+            <!---This button opens up the modal-->
+            <button id="assetbtn" class=" px-4 py-1 basis-1/2 text-xl2 bg-blue-900 rounded-full border border-gray-400 text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Add Assets</button>
+            <button id="clearBtn" class=" px-4 py-1 basis-1/2 text-xl2 bg-blue-900 rounded-full border border-gray-400 text-white font-semibold hover:text-white hover:bg-blue-500 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Clear Assets</button>
+        </div>
+        <!-- Graph w/ D3.js  -->
+        <div id="canvas" class="flex p-5 justify-evenly bg-gray-700 object-scale-down md:grow">
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

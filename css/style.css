@@ -1,0 +1,182 @@
+body{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; 
+    position: fixed;
+    z-index: 1; 
+    padding-top: 100px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+  /* Modal Content */
+.modal-content  {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    height: 50%;
+    border-radius: 20px;
+    overflow-y: scroll;
+    text-align: center;
+}
+
+  /* The Close Button */
+#close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#close:hover,
+#close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Modal css Ends here*/
+
+/*Everything that is inside of the modal_______________________________________*/
+.search-wrapper{
+    font-size: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5px;
+}
+
+ul{
+    display: flex;
+}
+
+.cryptoTable{
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 25px #a39e9e;
+    background-color: white;
+    font-size: 1.3rem;
+    border-collapse: collapse;
+    border-radius: 10px;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.name{
+    display:none;
+}
+
+.hide{
+    display: none;
+}
+
+
+/* Replaced css w/ Tailwind */
+    /* #cryptobtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+
+    } */
+
+    /* #stockbtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+    #currencybtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    } */
+/*  */
+
+/* #cryptoSearch {
+    display: block;
+    width: 100%;
+    height:35px;
+    border-radius: 10px; 
+    font-size: 25px;
+    margin: 1rem 0;
+} */
+
+/*Modal contents ends here______________________________________________________________________________________*/
+
+
+.mainDiv {
+    /* display: flex;
+    flex-direction: column; */
+    height: 100vh;
+    /* width: 80vw; */
+    /* justify-content: center;
+    margin: auto; */
+}
+
+/* Replaced styles w Tailwind 
+    Portfolio header and total value styling
+    .portfolioValue{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    
+    Assets, graph and button styling
+    .assets {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .assets table{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+    }
+    
+    .assets table th,td{
+        padding: 10px;
+    }
+    
+    .assets table th{
+        font-size: 35px;
+    }
+    
+    .assets table td {
+        font-size: 20px;
+    }
+    
+    .assets img{
+        object-fit: scale-down;
+        width: 400px;
+        height: 300px;
+    }
+    
+    .assets button{
+        align-self: flex-start;
+        font-size: 15px;
+        background-color: rgb(165, 165, 165);
+    } */
+
