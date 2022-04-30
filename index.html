@@ -14,9 +14,8 @@
     <script src="script.js" defer></script>
 </head>
 
+
 <body>
-
-
     <!--Modal and its contents .-->
     <div id="mymodal" class = "modal">
 
@@ -47,53 +46,54 @@
                     <div id="cryptoRows"></div>
                 </div>
 
-         
             </div>
         </div>
     </div>
 
-    <div class="mainDiv grid md:grid-cols-4 md:grid-rows-2 grid-cols-1 grid-rows-5 gap-10 justify-center h-screen content-center">
-
-        <div class="portfolioValue p-1 bg-sky-900 text-white col-span-2 flex justify-center text-7xl font-bold justify-around items-center
-        md:text-5xl sm:text-4xl lg:text-7xl">
-            <h1>Portfolio <br> Value</h1>
-        </div>
-        <div class="bg-red-400 text-white col-span-2 flex text-left items-center">
-            <!-- <p> to insert assets value -->
-            <p id="assetValue" class= "text-center text-4xl md:text-5xl lg:text-7xl">$0.00</p>
-        </div>
-
-        <div class="bg-red-400 col-span-2 flex-row self-star ml-4 text-white">
-            <!-- table to organize assets -->
-            <table id="cryptoTable" class="col-span-1"> <!--HACER ESTO UN SOLO DIV QUE AGARRE LA INFORMACION DE LOCAL STORAGE. SI NO HAY NADA SIMPLEMENTE NO SE DEMUESTRA NADA.-->
-                <tbody id="cryptoTableBody">
-                    <tr id="cryptoHeader">
-                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Asset</th>
-                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Price</th>
-                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Value</th>
-                        <th class="col-span-2 p-2.5 text-3x1 md:text-4x1">Local value</th>
-                    </tr>
-                    <tr id="cryptoAsset">
-                        <td id = assetName> </td>
-                        <td id = assetPrice> </td>
-                        <td id = assetHoldings> </td>
-                        <td id = valueMXN> </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
-        <!-- Graph w/ D3.js  -->
-        <div id="canvas" class="bg-sky-900 col-span-1 object-scale-down flex-row w-400px h-300px md:flex">
-            <!-- <div id="canvas"></div> -->
-        </div>
-            
-        <!---This button opens up the modal-->
-        <div class="col-span-1 self-start mr-4 text-center flex justify-center md:justify-end text-sm text-amber-400 font-semibold rounded-full border border-amber-400 hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
-            <button id = "assetbtn" class="px-4 py-1 grow">Assets +</button>
-        </div>
-
+    <!-- Complete Portfolio -->
+<div class="mainDiv grid grid-cols-1 auto-rows-auto gap-5 md:gap-10 justify-center content-center md:grid-cols-4 md:grid-rows-2">
+    <!-- Title -->
+    <div class="bg-sky-900 text-white row-span-1 md:col-span-2 flex justify-center font-bold items-center text-4xl md:text-5xl">
+        <h1>Portfolio Value</h1>
     </div>
+    <!-- Personal Assets -->
+    <div class="text-4xl md:text-5xl bg-red-400 text-white row-span-1 md:col-span-2 flex justify-center items-center">
+        <!-- Asset values sum show here -->
+        <p id="assetValue">$0.00</p>
+    </div>
+
+    <!-- table to organize assets -->
+    <div class="flex bg-sky-900 row-span-1 md:col-span-2 flex-row text-white">
+        <table id="cryptoTable" class="">
+            <!--Table that shows the added crypto or stock. Nothing's shown w/ no added values-->
+            <tbody id="cryptoTableBody">
+                <tr id="cryptoHeader">
+                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Asset</th>
+                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Price</th>
+                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Value</th>
+                    <th class="col-span-2 p-3 md:p-4 text-3xl lg:text-4xl ">Local value</th>
+                </tr>
+                <tr id="cryptoAsset">
+                    <td id=assetName class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
+                    <td id=assetPrice class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
+                    <td id=assetHoldings class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
+                    <td id=valueMXN class="col-span-2 p-3 md:p-4 text-3xl lg:text-5xl"> </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Button and Graph -->
+    <div class="flex flex-col row-span-1 md:col-span-2">
+        <div class="flex rounded-full border border-amber-400">
+            <!---This button opens up the modal-->
+            <button id="assetbtn" class="px-4 py-1 grow text-sm text-amber-400 font-semibold hover:text-white hover:bg-amber-400 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2 hover:rounded-full">Assets +</button>
+        </div>
+        <!-- Graph w/ D3.js  -->
+        <div id="canvas" class="flex bg-sky-900 object-scale-down xl:grow">
+        </div>
+    </div>
+</div>
 
 </body>
 </html>

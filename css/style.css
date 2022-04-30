@@ -15,11 +15,10 @@ body{
     overflow: auto; 
     background-color: rgb(0,0,0); 
     background-color: rgba(0,0,0,0.4); 
-  }
-  
-  
+}
+
   /* Modal Content */
-  .modal-content  {
+.modal-content  {
     background-color: #fefefe;
     margin: auto;
     padding: 20px;
@@ -29,18 +28,18 @@ body{
     border-radius: 20px;
     overflow-y: scroll;
     text-align: center;
-  }
-  
+}
+
   /* The Close Button */
-  #close {
+#close {
     color: #aaaaaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  
-  #close:hover,
-  #close:focus {
+}
+
+#close:hover,
+#close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -69,8 +68,6 @@ ul{
     border-radius: 10px;
     align-items: center;
     margin-top: 1rem;
- 
- 
 }
 
 .name{
@@ -82,36 +79,38 @@ ul{
 }
 
 
-/* #cryptobtn{
-    background-color: #3D426B;
-    border-radius: 10px;
-    padding: 10px;
-    width: 85%;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-    
-} */
+/* Replaced css w/ Tailwind */
+    /* #cryptobtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
 
-/* #stockbtn{
-    background-color: #3D426B;
-    border-radius: 10px;
-    padding: 10px;
-    width: 85%;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-}
+    } */
 
-#currencybtn{
-    background-color: #3D426B;
-    border-radius: 10px;
-    padding: 10px;
-    width: 85%;
-    font-size: 30px;
-    font-weight: bold;
-    color: white;
-} */
+    /* #stockbtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    }
+
+    #currencybtn{
+        background-color: #3D426B;
+        border-radius: 10px;
+        padding: 10px;
+        width: 85%;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+    } */
+/*  */
 
 #cryptoSearch {
     display: block;
@@ -120,79 +119,64 @@ ul{
     border-radius: 10px; 
     font-size: 25px;
     margin: 1rem 0;
-
-
 }
 
 /*Modal contents ends here______________________________________________________________________________________*/
 
 
-li {
-    list-style: none;
-    flex: auto;
-}
-
-h1{
-    font-size: 100px;
-} 
-
-p{
-    font-size: 80px;
-}
-
 .mainDiv {
-    display: flex;
-    flex-direction: column;
+    /* display: flex;
+    flex-direction: column; */
     height: 100vh;
     /* width: 80vw; */
-    justify-content: center;
-    margin: auto;
+    /* justify-content: center;
+    margin: auto; */
 }
 
-/* Portfolio header and total value styling */
-/* .portfolioValue{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    padding-bottom: 40px;
-} */
-
-/* Assets, graph and button styling */
-.assets {
+/* Replaced styles w Tailwind 
+    Portfolio header and total value styling
+    .portfolioValue{
         display: flex;
-        /* flex-direction: row; */
-            justify-content: space-around;
-            align-items: center;
-}
-
-.assets table{
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        padding-bottom: 40px;
+    }
+    
+    Assets, graph and button styling
+    .assets {
         display: flex;
-        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .assets table{
+            display: flex;
+            flex-direction: column;
+            align-self: flex-start;
+    }
+    
+    .assets table th,td{
+        padding: 10px;
+    }
+    
+    .assets table th{
+        font-size: 35px;
+    }
+    
+    .assets table td {
+        font-size: 20px;
+    }
+    
+    .assets img{
+        object-fit: scale-down;
+        width: 400px;
+        height: 300px;
+    }
+    
+    .assets button{
         align-self: flex-start;
-}
-
-.assets table th,td{
-    padding: 10px;
-}
-
-.assets table th{
-    font-size: 35px;
-}
-
-.assets table td {
-    font-size: 20px;
-}
-
-.assets img{
-    object-fit: scale-down;
-    width: 400px;
-    height: 300px;
-}
-
-.assets button{
-    align-self: flex-start;
-    font-size: 15px;
-    background-color: rgb(165, 165, 165);
-}
+        font-size: 15px;
+        background-color: rgb(165, 165, 165);
+    } */
 
