@@ -11,8 +11,8 @@ With that in mind, team #3 has developed a tool that helps to keep track of one'
 
 <!-- Please also update the following links -->
 [logo]: ./img/logo.png
-[application-image]: ./img/app-image.webp
-[application-url]: https://example.com/
+[application-image]: ./img/app-image.png
+[application-url]: https://richardguarnieri.github.io/personal-asset-manager/
 
 <div id="home"><div> 
 
